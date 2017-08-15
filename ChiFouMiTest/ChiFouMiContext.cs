@@ -1,5 +1,6 @@
 ﻿using ChiFouMiLibrary;
 using ChiFouMiLibrary.Interfaces;
+using ChiFouMiLibrary.Parsers;
 using ChiFouMiLibrary.Players;
 using NSubstitute;
 
@@ -8,10 +9,12 @@ namespace ChiFouMiTest
     public class ChiFouMiContext
     {
         private IHandShakeGenerator _generator;
+        private ICommandParser _parser;
 
         public ChiFouMiContext()
         {
             _generator = Substitute.For<IHandShakeGenerator>();
+            _parser = new CommandParser();
             ComputerPlayer = new ComputerPlayer(_generator);
         }
 
@@ -39,6 +42,11 @@ namespace ChiFouMiTest
         {
             _generator.GenerateHandShake().Returns(Shake.Scissors);
             return ComputerPlayer.Play();
+        }
+
+        public Shake ParseCommand(string command)
+        {
+            return _parser.Parse(command);
         }
     }
 }

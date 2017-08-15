@@ -40,11 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\CommandException.cs" />
     <Compile Include="HandShake.cs" />
     <Compile Include="HandShakeGenerator.cs" />
     <Compile Include="HandShakes.cs" />
+    <Compile Include="Interfaces\ICommandParser.cs" />
     <Compile Include="Interfaces\IHandShakeGenerator.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
+    <Compile Include="Parsers\CommandParser.cs" />
     <Compile Include="Players\ComputerPlayer.cs" />
     <Compile Include="Players\HumanPlayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

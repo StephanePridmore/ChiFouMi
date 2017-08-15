@@ -1,4 +1,5 @@
 ﻿using ChiFouMiLibrary;
+using ChiFouMiLibrary.Parsers;
 using NFluent;
 using NUnit.Framework;
 using System;
@@ -61,6 +62,24 @@ namespace ChiFouMiTest
         public void ShouldGenerateScissorsHandShake()
         {
             Check.That(Context.PlayScissorsHandShake()).Equals(Shake.Scissors);
+        }
+
+        [Test]
+        public void ShouldReturnScissorsWhenCommandIsS()
+        {
+            Check.That(Context.ParseCommand("R")).Equals(Shake.Rock);
+        }
+
+        [Test]
+        public void ShouldReturnPaperWhenCommandIsP()
+        {
+            Check.That(Context.ParseCommand("P")).Equals(Shake.Paper);
+        }
+
+        [Test]
+        public void ShouldReturnRockWhenCommandIsR()
+        {
+            Check.That(Context.ParseCommand("S")).Equals(Shake.Scissors);
         }
     }
 }
