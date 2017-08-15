@@ -8,7 +8,22 @@ namespace ChiFouMiLibrary.Parsers
     {
         public Shake Parse(string command)
         {
-            throw new CommandException();
+            if (command.ToUpper().Equals("S"))
+            {
+                return Shake.Scissors;
+            }
+            else if (command.ToUpper().Equals("P"))
+            {
+                return Shake.Paper;
+            }
+            else if (command.ToUpper().Equals("R"))
+            {
+                return Shake.Rock;
+            }
+            else
+            {
+                throw new CommandException("Unrecognized command");
+            }
         }
     }
 }
