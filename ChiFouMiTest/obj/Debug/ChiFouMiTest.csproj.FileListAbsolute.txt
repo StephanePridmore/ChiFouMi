@@ -1,0 +1,5 @@
+C:\Users\Wall-e\Documents\GitHub\ChiFouMi\ChiFouMi\ChiFouMiTest\bin\Debug\ChiFouMiTest.dll
+C:\Users\Wall-e\Documents\GitHub\ChiFouMi\ChiFouMi\ChiFouMiTest\bin\Debug\ChiFouMiTest.pdb
+C:\Users\Wall-e\Documents\GitHub\ChiFouMi\ChiFouMi\ChiFouMiTest\obj\Debug\ChiFouMiTest.csprojResolveAssemblyReference.cache
+C:\Users\Wall-e\Documents\GitHub\ChiFouMi\ChiFouMi\ChiFouMiTest\obj\Debug\ChiFouMiTest.dll
+C:\Users\Wall-e\Documents\GitHub\ChiFouMi\ChiFouMi\ChiFouMiTest\obj\Debug\ChiFouMiTest.pdb

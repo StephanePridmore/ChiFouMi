@@ -1,0 +1,6 @@
+C:\Users\Wall-e\Documents\GitHub\ChiFouMi\ChiFouMi\ChiFouMi\bin\Debug\ChiFouMi.exe.config
+C:\Users\Wall-e\Documents\GitHub\ChiFouMi\ChiFouMi\ChiFouMi\bin\Debug\ChiFouMi.exe
+C:\Users\Wall-e\Documents\GitHub\ChiFouMi\ChiFouMi\ChiFouMi\bin\Debug\ChiFouMi.pdb
+C:\Users\Wall-e\Documents\GitHub\ChiFouMi\ChiFouMi\ChiFouMi\obj\Debug\ChiFouMi.csprojResolveAssemblyReference.cache
+C:\Users\Wall-e\Documents\GitHub\ChiFouMi\ChiFouMi\ChiFouMi\obj\Debug\ChiFouMi.exe
+C:\Users\Wall-e\Documents\GitHub\ChiFouMi\ChiFouMi\ChiFouMi\obj\Debug\ChiFouMi.pdb
