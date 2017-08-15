@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8A623036-1156-4B1C-9B1F-2A37527F9C3C}</ProjectGuid>
+    <ProjectGuid>{67C0707B-66BA-41A5-ACD9-7FD3E8243F78}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>ChiFouMi</RootNamespace>
     <AssemblyName>ChiFouMi</AssemblyName>
