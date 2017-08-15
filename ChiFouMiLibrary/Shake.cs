@@ -2,5 +2,8 @@
 {
     public enum Shake
     {
+        Rock,
+        Paper,
+        Scissors
     }
 }
