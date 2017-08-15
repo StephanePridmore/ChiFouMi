@@ -2,4 +2,3 @@ C:\Users\Wall-e\Documents\Visual Studio 2017\Projects\ChiFouMi\ChiFouMiLibrary\b
 C:\Users\Wall-e\Documents\Visual Studio 2017\Projects\ChiFouMi\ChiFouMiLibrary\bin\Debug\ChiFouMiLibrary.pdb
 C:\Users\Wall-e\Documents\Visual Studio 2017\Projects\ChiFouMi\ChiFouMiLibrary\obj\Debug\ChiFouMiLibrary.dll
 C:\Users\Wall-e\Documents\Visual Studio 2017\Projects\ChiFouMi\ChiFouMiLibrary\obj\Debug\ChiFouMiLibrary.pdb
-C:\Users\Wall-e\Documents\Visual Studio 2017\Projects\ChiFouMi\ChiFouMiLibrary\obj\Debug\ChiFouMiLibrary.csprojResolveAssemblyReference.cache

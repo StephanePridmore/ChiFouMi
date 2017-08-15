@@ -48,21 +48,39 @@ namespace ChiFouMiTest
         }
 
         [Test]
-        public void ShouldGeneratePaperHandShake()
+        public void ShouldGeneratePaperHandShakeWhenComputerPlays()
         {
-            Check.That(Context.PlayPaperHandShake()).Equals(Shake.Paper);
+            Check.That(Context.ComputerPlaysPaperHandShake()).Equals(Shake.Paper);
         }
 
         [Test]
-        public void ShouldGenerateRockHandShake()
+        public void ShouldGenerateRockHandShakeWhenComputerPlays()
         {
-            Check.That(Context.PlayRockHandShake()).Equals(Shake.Rock);
+            Check.That(Context.ComputerPlaysRockHandShake()).Equals(Shake.Rock);
         }
 
         [Test]
-        public void ShouldGenerateScissorsHandShake()
+        public void ShouldGenerateScissorsHandShakeWhenComputerPlays()
         {
-            Check.That(Context.PlayScissorsHandShake()).Equals(Shake.Scissors);
+            Check.That(Context.ComputerPlaysScissorsHandShake()).Equals(Shake.Scissors);
+        }
+
+        [Test]
+        public void ShouldGeneratePaperHandShakeWhenHumanPlays()
+        {
+            Check.That(Context.HumanPlaysPaperHandShake()).Equals(Shake.Paper);
+        }
+
+        [Test]
+        public void ShouldGenerateRockHandShakeWhenHumanPlays()
+        {
+            Check.That(Context.HumanPlaysRockHandShake()).Equals(Shake.Rock);
+        }
+
+        [Test]
+        public void ShouldGenerateScissorsHandShakeWhenHumanPlays()
+        {
+            Check.That(Context.HumanPlaysScissorsHandShake()).Equals(Shake.Scissors);
         }
 
         [Test]
