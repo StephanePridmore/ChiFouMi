@@ -8,13 +8,19 @@ namespace ChiFouMiLibrary
 {
     public class HandShakes
     {
-        private readonly HandShake[] _gameShakes;
+        private HandShake[] _gameShakes = new HandShake[]
+            {
+                new HandShake(Shake.Paper, Shake.Rock),
+                new HandShake(Shake.Rock, Shake.Scissors),
+                new HandShake(Shake.Scissors, Shake.Paper)
+            };
 
-        public HandShakes()
+        public HandShake[] GameShakes
         {
-
+            get
+            {
+                return _gameShakes;
+            }
         }
-
-        public HandShake[] GameShakes { get; }
     }
 }

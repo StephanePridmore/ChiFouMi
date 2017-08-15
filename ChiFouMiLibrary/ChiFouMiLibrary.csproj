@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HandShake.cs" />
+    <Compile Include="HandShakes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shake.cs" />
   </ItemGroup>
