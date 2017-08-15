@@ -1,4 +1,5 @@
 ﻿using ChiFouMiLibrary;
+using ChiFouMiLibrary.Exceptions;
 using ChiFouMiLibrary.Parsers;
 using NFluent;
 using NUnit.Framework;
@@ -80,6 +81,12 @@ namespace ChiFouMiTest
         public void ShouldReturnRockWhenCommandIsR()
         {
             Check.That(Context.ParseCommand("S")).Equals(Shake.Scissors);
+        }
+
+        [Test]
+        public void ShouldThrowAnExceptionWhenCommandIsSomethingElse()
+        {
+            Check.ThatCode(() => { return new CommandParser().Parse("W"); }).Throws<CommandException>();
         }
     }
 }
