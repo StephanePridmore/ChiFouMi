@@ -44,5 +44,23 @@ namespace ChiFouMiTest
         {
             Check.That(Context.ScissorsShake.WinAgaints).Equals(Shake.Paper);
         }
+
+        [Test]
+        public void ShouldGeneratePaperHandShake()
+        {
+            Check.That(Context.PlayPaperHandShake()).Equals(Shake.Paper);
+        }
+
+        [Test]
+        public void ShouldGenerateRockHandShake()
+        {
+            Check.That(Context.PlayRockHandShake()).Equals(Shake.Rock);
+        }
+
+        [Test]
+        public void ShouldGenerateScissorsHandShake()
+        {
+            Check.That(Context.PlayScissorsHandShake()).Equals(Shake.Scissors);
+        }
     }
 }
