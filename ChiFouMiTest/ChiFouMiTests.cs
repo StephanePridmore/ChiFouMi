@@ -12,5 +12,11 @@ namespace ChiFouMiTest
         {
             Check.That(Enum.GetNames(typeof(Shake))).ContainsExactly("Rock", "Paper", "Scissors");
         }
+
+        [Test]
+        public void ShouldGameShakesHaveThreeHandShakes()
+        {
+            Check.That(new HandShakes().GameShakes.Count()).Equals(3);
+        }
     }
 }
