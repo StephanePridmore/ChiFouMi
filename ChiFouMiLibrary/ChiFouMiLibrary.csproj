@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="HandShake.cs" />
     <Compile Include="HandShakes.cs" />
+    <Compile Include="Interfaces\IHandShakeGenerator.cs" />
+    <Compile Include="Interfaces\IPlayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shake.cs" />
   </ItemGroup>
