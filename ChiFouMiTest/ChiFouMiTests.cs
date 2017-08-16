@@ -26,7 +26,7 @@ namespace ChiFouMiTest
         [Test]
         public void ShouldGameShakesHaveThreeHandShakes()
         {
-            Check.That(new HandShakeHelper().GameShakes.Count()).Equals(3);
+            Check.That(HandShakeHelper.GameShakes.Count()).Equals(3);
         }
 
         [Test]

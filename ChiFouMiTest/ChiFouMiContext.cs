@@ -87,19 +87,22 @@ namespace ChiFouMiTest
         {
             // first player
             if (firstPlayerShake.Equals(Shake.Paper))
-                HumanPlaysPaperHandShake();
+                _console.ReadLine().Returns("p");
             else if (firstPlayerShake.Equals(Shake.Rock))
-                HumanPlaysRockHandShake();
+                _console.ReadLine().Returns("r");
             else
-                HumanPlaysScissorsHandShake();
+                _console.ReadLine().Returns("s");
 
             // second player
             if (secondPlayerShake.Equals(Shake.Paper))
-                ComputerPlaysPaperHandShake();
+                _generator.GenerateHandShake().Returns(Shake.Paper);
             else if (secondPlayerShake.Equals(Shake.Rock))
-                ComputerPlaysRockHandShake();
+                _generator.GenerateHandShake().Returns(Shake.Rock);
             else
-                ComputerPlaysScissorsHandShake();
+                _generator.GenerateHandShake().Returns(Shake.Scissors);
+
+            // Play!
+            Referee.PlayNewGame();
         }
     }
 }

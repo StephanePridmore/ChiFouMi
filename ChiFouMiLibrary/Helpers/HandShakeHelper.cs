@@ -1,20 +1,27 @@
-﻿namespace ChiFouMiLibrary
+﻿using System.Linq;
+
+namespace ChiFouMiLibrary
 {
-    public class HandShakeHelper
+    public static class HandShakeHelper
     {
-        private HandShake[] _gameShakes = new HandShake[]
+        private static HandShake[] _gameShakes = new HandShake[]
             {
                 new HandShake(Shake.Paper, Shake.Rock),
                 new HandShake(Shake.Rock, Shake.Scissors),
                 new HandShake(Shake.Scissors, Shake.Paper)
             };
 
-        public HandShake[] GameShakes
+        public static HandShake[] GameShakes
         {
             get
             {
                 return _gameShakes;
             }
+        }
+
+        public static HandShake ResolveHandShakeByShake(Shake shake)
+        {
+            return _gameShakes.Where(x => x.Shake == shake).First();
         }
     }
 }
