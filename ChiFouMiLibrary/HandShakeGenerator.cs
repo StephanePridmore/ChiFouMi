@@ -7,7 +7,7 @@ namespace ChiFouMiLibrary
     {
         public Shake GenerateHandShake()
         {
-            var random = new Random();
+            var random = new Random(DateTime.Now.Millisecond);
             var choice = random.Next(0, 2);
 
             if (choice == 0)

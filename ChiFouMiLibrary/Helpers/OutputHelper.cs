@@ -45,7 +45,7 @@ namespace ChiFouMiLibrary.Helpers
         {
             Console.WriteLine($"First player has {firstPlayerScore}");
             Console.WriteLine($"Second player has {secondPlayerScore}");
-            Console.WriteLine();
+            Console.WriteLine(); 
         }
         
         public static void SomethingOddHappened()
