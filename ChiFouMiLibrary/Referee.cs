@@ -56,10 +56,18 @@ namespace ChiFouMiLibrary
             if (firstPlayerShake.WinAgaints == secondPlayerShake.Shake)
             {
                 FirstPlayerWins++;
+                OutputHelper.Shakes(firstPlayerShake.Shake, secondPlayerShake.Shake);
+                OutputHelper.PlayerWins("First");
             }
             else if (secondPlayerShake.WinAgaints == firstPlayerShake.Shake)
             {
                 SecondPlayerWins++;
+                OutputHelper.Shakes(firstPlayerShake.Shake, secondPlayerShake.Shake);
+                OutputHelper.PlayerWins("Second");
+            }
+            else
+            {
+                OutputHelper.Draw();
             }
         }
     }

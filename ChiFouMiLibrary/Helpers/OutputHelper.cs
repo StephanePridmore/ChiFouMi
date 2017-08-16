@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ChiFouMiLibrary.Interfaces;
+using System;
 
 namespace ChiFouMiLibrary.Helpers
 {
@@ -18,16 +15,19 @@ namespace ChiFouMiLibrary.Helpers
             Console.WriteLine();
         }
 
+        public static void Shakes(Shake firstPlayer, Shake secondPlayer)
+        {
+            Console.WriteLine($"{firstPlayer} vs {secondPlayer}");
+        }
+
         public static void PlayerWins(string player)
         {
-            Console.WriteLine($"{player} Wins!!!");
-            Console.WriteLine();
+            Console.WriteLine($"{player} wins!!!");
         }
 
         public static void Draw()
         {
             Console.WriteLine($"Draw.. Sorry no winners this time.");
-            Console.WriteLine();
         }
 
         public static void NewGame()
