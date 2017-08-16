@@ -121,6 +121,29 @@ namespace ChiFouMiTest
 
             // Assert
             Check.That(Context.Referee.FirstPlayerWins).Equals(1);
+            Check.That(Context.Referee.SecondPlayerWins).Equals(0);
+        }
+
+        [Test]
+        public void ShouldSecondPlayerWinWhenPlayIsPaperVsScissors()
+        {
+            // Act
+            Context.Play(Shake.Paper, Shake.Scissors);
+
+            // Assert
+            Check.That(Context.Referee.FirstPlayerWins).Equals(0);
+            Check.That(Context.Referee.SecondPlayerWins).Equals(1);
+        }
+
+        [Test]
+        public void ShouldNoPlayerWinWhenPlayIsPaperVsPaper()
+        {
+            // Act
+            Context.Play(Shake.Paper, Shake.Paper);
+
+            // Assert
+            Check.That(Context.Referee.FirstPlayerWins).Equals(0);
+            Check.That(Context.Referee.SecondPlayerWins).Equals(0);
         }
     }
 }
