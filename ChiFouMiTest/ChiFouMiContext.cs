@@ -83,6 +83,12 @@ namespace ChiFouMiTest
             return (Referee.FirstPlayerWins.Equals(0) && Referee.SecondPlayerWins.Equals(0));
         }
 
+        public void InsertQuitCommand()
+        {
+            _console.ReadLine().Returns("q");
+            _generator.GenerateHandShake().Returns(Shake.Paper);
+        }
+
         public void Play(Shake firstPlayerShake, Shake secondPlayerShake)
         {
             // first player

@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ConsoleWrapper.cs" />
     <Compile Include="Exceptions\CommandException.cs" />
+    <Compile Include="Exceptions\TimeToLeaveException.cs" />
     <Compile Include="HandShake.cs" />
     <Compile Include="HandShakeGenerator.cs" />
     <Compile Include="Helpers\HandShakeHelper.cs" />

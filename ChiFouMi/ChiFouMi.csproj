@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChiFouMiLibrary\ChiFouMiLibrary.csproj">
+      <Project>{5026E036-D278-4809-81FC-8E08C96520DC}</Project>
+      <Name>ChiFouMiLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

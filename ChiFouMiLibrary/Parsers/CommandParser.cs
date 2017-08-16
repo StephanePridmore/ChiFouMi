@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Serialization;
 using ChiFouMiLibrary.Exceptions;
 using ChiFouMiLibrary.Interfaces;
 
@@ -8,21 +9,18 @@ namespace ChiFouMiLibrary.Parsers
     {
         public Shake Parse(string command)
         {
-            if (command.ToUpper().Equals("S"))
+            switch (command.ToUpper())
             {
-                return Shake.Scissors;
-            }
-            else if (command.ToUpper().Equals("P"))
-            {
-                return Shake.Paper;
-            }
-            else if (command.ToUpper().Equals("R"))
-            {
-                return Shake.Rock;
-            }
-            else
-            {
-                throw new CommandException("Unrecognized command");
+                case "S":
+                    return Shake.Scissors;
+                case "P":
+                    return Shake.Paper;
+                case "R":
+                    return Shake.Rock;
+                case "Q":
+                    throw new TimeToLeaveException("Time to stop and go back to work");
+                default:
+                    throw new CommandException("Unrecognized command");
             }
         }
     }

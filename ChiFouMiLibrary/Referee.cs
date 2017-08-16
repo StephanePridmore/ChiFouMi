@@ -1,5 +1,7 @@
-﻿using ChiFouMiLibrary.Helpers;
+﻿using ChiFouMiLibrary.Exceptions;
+using ChiFouMiLibrary.Helpers;
 using ChiFouMiLibrary.Interfaces;
+using System;
 
 namespace ChiFouMiLibrary
 {
@@ -16,6 +18,35 @@ namespace ChiFouMiLibrary
 
         public int FirstPlayerWins { get; set; }
         public int SecondPlayerWins { get; set; }
+
+        public void StartPlaying()
+        {
+            OutputHelper.GameStarting();
+            OutputHelper.PrintHelp();
+
+            while (true)
+            {
+                try
+                {
+                    OutputHelper.NewGame();
+                    PlayNewGame();
+                    OutputHelper.GameScore(FirstPlayerWins, SecondPlayerWins);
+                }
+                catch (CommandException)
+                {
+                    OutputHelper.PrintExceptionMessage();
+                    OutputHelper.PrintHelp();
+                }
+                catch (TimeToLeaveException)
+                {
+                    break;
+                }
+                catch (Exception)
+                {
+                    OutputHelper.SomethingOddHappened();
+                }
+            }
+        }
 
         public void PlayNewGame()
         {

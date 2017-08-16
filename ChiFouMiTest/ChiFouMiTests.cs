@@ -145,5 +145,28 @@ namespace ChiFouMiTest
             Check.That(Context.Referee.FirstPlayerWins).Equals(0);
             Check.That(Context.Referee.SecondPlayerWins).Equals(0);
         }
+
+        [Test]
+        public void ShouldFirstPlayerWinThreeToZero()
+        {
+            // Act
+            Context.Play(Shake.Paper, Shake.Rock);
+            Context.Play(Shake.Paper, Shake.Rock);
+            Context.Play(Shake.Scissors, Shake.Paper);
+
+            // Assert
+            Check.That(Context.Referee.FirstPlayerWins).Equals(3);
+            Check.That(Context.Referee.SecondPlayerWins).Equals(0);
+        }
+
+        [Test]
+        public void ShouldThrowATimeToLeaveExceptionWhenCommandIsQ()
+        {
+            // Act
+            Context.InsertQuitCommand();
+
+            // Assert
+            Check.ThatCode(() => { Context.Referee.PlayNewGame(); }).Throws<TimeToLeaveException>();
+        }
     }
 }

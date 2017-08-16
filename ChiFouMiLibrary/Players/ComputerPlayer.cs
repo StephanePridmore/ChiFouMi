@@ -7,6 +7,11 @@ namespace ChiFouMiLibrary.Players
     {
         private IHandShakeGenerator _handShakeGenerator;
 
+        public ComputerPlayer()
+        {
+            _handShakeGenerator = new HandShakeGenerator();
+        }
+
         public ComputerPlayer(IHandShakeGenerator generator)
         {
             _handShakeGenerator = generator;

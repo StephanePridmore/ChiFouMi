@@ -9,6 +9,12 @@ namespace ChiFouMiLibrary.Players
         private ICommandParser _parser;
         private IConsole _console;
 
+        public HumanPlayer()
+        {
+            _parser = new CommandParser();
+            _console = new ConsoleWrapper();
+        }
+
         public HumanPlayer(ICommandParser parser, IConsole console)
         {
             _parser = parser;
