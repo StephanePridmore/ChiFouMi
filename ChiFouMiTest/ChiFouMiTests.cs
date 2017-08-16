@@ -106,5 +106,11 @@ namespace ChiFouMiTest
         {
             Check.ThatCode(() => { return new CommandParser().Parse("W"); }).Throws<CommandException>();
         }
+
+        [Test]
+        public void ShouldPlayerWinsAreEqualToZeroWhenGameStarts()
+        {
+            Check.That(Context.StartNewGame()).Equals(true);
+        }
     }
 }

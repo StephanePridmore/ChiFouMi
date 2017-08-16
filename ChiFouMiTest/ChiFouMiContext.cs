@@ -1,4 +1,5 @@
-﻿using ChiFouMiLibrary;
+﻿using System;
+using ChiFouMiLibrary;
 using ChiFouMiLibrary.Interfaces;
 using ChiFouMiLibrary.Parsers;
 using ChiFouMiLibrary.Players;
@@ -19,7 +20,10 @@ namespace ChiFouMiTest
             _parser = new CommandParser();
             HumanPlayer = new HumanPlayer(_parser, _console);
             ComputerPlayer = new ComputerPlayer(_generator);
+            Referee = new Referee(HumanPlayer, ComputerPlayer);
         }
+
+        public Referee Referee { get; set; }
 
         public ComputerPlayer ComputerPlayer { get; set; }
 
@@ -70,6 +74,11 @@ namespace ChiFouMiTest
         public Shake ParseCommand(string command)
         {
             return _parser.Parse(command);
+        }
+
+        public bool StartNewGame()
+        {
+            return (Referee.FirstPlayerWins.Equals(0) && Referee.SecondPlayerWins.Equals(0));
         }
     }
 }
