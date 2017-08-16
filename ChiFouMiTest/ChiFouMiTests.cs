@@ -84,7 +84,7 @@ namespace ChiFouMiTest
         }
 
         [Test]
-        public void ShouldReturnScissorsWhenCommandIsS()
+        public void ShouldReturnScissorsWhenCommandIsR()
         {
             Check.That(Context.ParseCommand("R")).Equals(Shake.Rock);
         }
@@ -96,7 +96,7 @@ namespace ChiFouMiTest
         }
 
         [Test]
-        public void ShouldReturnRockWhenCommandIsR()
+        public void ShouldReturnRockWhenCommandIsS()
         {
             Check.That(Context.ParseCommand("S")).Equals(Shake.Scissors);
         }

@@ -1,5 +1,4 @@
 ﻿using ChiFouMiLibrary;
-using ChiFouMiLibrary.Parsers;
 using ChiFouMiLibrary.Players;
 
 namespace ChiFouMi
