@@ -44,7 +44,7 @@
     <Compile Include="Exceptions\CommandException.cs" />
     <Compile Include="HandShake.cs" />
     <Compile Include="HandShakeGenerator.cs" />
-    <Compile Include="HandShakes.cs" />
+    <Compile Include="Helpers\HandShakeHelper.cs" />
     <Compile Include="Interfaces\ICommandParser.cs" />
     <Compile Include="Interfaces\IConsole.cs" />
     <Compile Include="Interfaces\IHandShakeGenerator.cs" />

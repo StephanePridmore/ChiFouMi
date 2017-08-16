@@ -26,7 +26,7 @@ namespace ChiFouMiTest
         [Test]
         public void ShouldGameShakesHaveThreeHandShakes()
         {
-            Check.That(new HandShakes().GameShakes.Count()).Equals(3);
+            Check.That(new HandShakeHelper().GameShakes.Count()).Equals(3);
         }
 
         [Test]
@@ -110,7 +110,17 @@ namespace ChiFouMiTest
         [Test]
         public void ShouldPlayerWinsAreEqualToZeroWhenGameStarts()
         {
-            Check.That(Context.StartNewGame()).Equals(true);
+            Check.That(Context.CheckThatWinsAreEqualToZeroWhenGameStarts()).Equals(true);
+        }
+
+        [Test]
+        public void ShouldFirstPlayerWinWhenPlayIsRockVsScissors()
+        {
+            // Act
+            Context.Play(Shake.Rock, Shake.Scissors);
+
+            // Assert
+            Check.That(Context.Referee.FirstPlayerWins).Equals(1);
         }
     }
 }

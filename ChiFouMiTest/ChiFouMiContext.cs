@@ -25,9 +25,11 @@ namespace ChiFouMiTest
 
         public Referee Referee { get; set; }
 
-        public ComputerPlayer ComputerPlayer { get; set; }
-
+        // A.K.A first player
         public HumanPlayer HumanPlayer { get; set; }
+
+        // A.K.A second player
+        public ComputerPlayer ComputerPlayer { get; set; }
 
         public HandShake PaperShake => new HandShake(Shake.Paper, Shake.Rock);
 
@@ -76,9 +78,28 @@ namespace ChiFouMiTest
             return _parser.Parse(command);
         }
 
-        public bool StartNewGame()
+        public bool CheckThatWinsAreEqualToZeroWhenGameStarts()
         {
             return (Referee.FirstPlayerWins.Equals(0) && Referee.SecondPlayerWins.Equals(0));
+        }
+
+        public void Play(Shake firstPlayerShake, Shake secondPlayerShake)
+        {
+            // first player
+            if (firstPlayerShake.Equals(Shake.Paper))
+                HumanPlaysPaperHandShake();
+            else if (firstPlayerShake.Equals(Shake.Rock))
+                HumanPlaysRockHandShake();
+            else
+                HumanPlaysScissorsHandShake();
+
+            // second player
+            if (secondPlayerShake.Equals(Shake.Paper))
+                ComputerPlaysPaperHandShake();
+            else if (secondPlayerShake.Equals(Shake.Rock))
+                ComputerPlaysRockHandShake();
+            else
+                ComputerPlaysScissorsHandShake();
         }
     }
 }
